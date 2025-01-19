@@ -11,7 +11,7 @@ const pages = [
   { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },
   { name: 'Privacy Policy', path: '/privacy' },
-  { name: 'Terms and Conditions', path: '/terms-and-conditions' },
+  { name: 'Terms and Conditions', path: '/terms-conditions' },
   { name: 'Cookies Policy', path: '/cookies' },
 ]
 
