@@ -33,7 +33,7 @@ export default function OurStory() {
         >
           <div className="relative h-[400px] rounded-lg overflow-hidden">
             <Image
-              src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop"
+              src="/our-story.avif"
               alt="Vellio Properties Project"
               fill
               className="object-cover"

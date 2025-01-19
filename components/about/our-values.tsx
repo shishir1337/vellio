@@ -1,9 +1,10 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Lightbulb, Users, Star } from 'lucide-react'
+import { Lightbulb, Users, Star, Handshake } from 'lucide-react'
+import { useMemo } from 'react'
 
-const values = [
+const VALUES = [
   {
     title: "Innovation",
     description: "We bring a fresh, innovative perspective to the UK real estate market, delivering impactful solutions that align with today's modern mindset.",
@@ -22,11 +23,13 @@ const values = [
   {
     title: "Partnership",
     description: "We partner with other organisations for our investment and management efforts, helping local businesses all across the UK.",
-    icon: Users,
+    icon: Handshake,
   },
-]
+] as const
 
 export default function OurValues() {
+  const memoizedValues = useMemo(() => VALUES, [])
+
   return (
     <section className="py-20 md:py-32 bg-[#fffae8]">
       <div className="container">
@@ -42,8 +45,8 @@ export default function OurValues() {
             Every action we take is guided by our strong core values and a commitment to excellence.
           </p>
         </motion.div>
-        <div className="grid md:grid-cols-3 gap-8">
-          {values.map((value, index) => (
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          {memoizedValues.map((value, index) => (
             <motion.div
               key={value.title}
               className="bg-white p-8 rounded-lg shadow-lg"
@@ -52,7 +55,7 @@ export default function OurValues() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
             >
-              <value.icon className="w-12 h-12 text-[#00447D] mb-4" />
+              <value.icon className="w-12 h-12 text-[#00447D] mb-4" aria-hidden="true" />
               <h3 className="text-xl font-semibold mb-4 text-[#00447D]">{value.title}</h3>
               <p className="text-muted-foreground">{value.description}</p>
             </motion.div>

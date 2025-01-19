@@ -44,7 +44,7 @@ export default function Features() {
   return (
     <section
       ref={ref}
-      className="py-20 md:py-32 overflow-hidden bg-gradient-to-b from-blue-50 to-white relative"
+      className="py-12 md:py-20 bg-gradient-to-b from-white to-blue-50"
     >
       <motion.div
         className="container space-y-16 relative z-10"
@@ -149,3 +149,4 @@ export default function Features() {
     </section>
   );
 }
+

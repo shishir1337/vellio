@@ -10,19 +10,19 @@ const features = [
     title: "Expert Market Knowledge",
     description: "Deep understanding of the UK real estate market and emerging investment trends.",
     icon: ChartBar,
-    image: "https://images.unsplash.com/photo-1460472178825-e5240623afd5?q=80&w=2069&auto=format&fit=crop",
+    image: "/features-1.avif",
   },
   {
     title: "Premium Locations",
     description: "Investing and developing projects in prime UK locations for residential and commercial needs.",
     icon: MapPin,
-    image: "https://images.unsplash.com/photo-1534237710431-e2fc698436d0?q=80&w=2070&auto=format&fit=crop",
+    image: "/features-2.avif",
   },
   {
     title: "Sustainable Actions",
     description: "Committed to eco-friendly, energy-efficient methods to reduce environmental impact.",
     icon: Leaf,
-    image: "https://images.unsplash.com/photo-1560179707-f14e90ef3623?q=80&w=2073&auto=format&fit=crop",
+    image: "/features-3.avif",
   },
 ]
 

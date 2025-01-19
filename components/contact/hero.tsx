@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { ChevronDown } from 'lucide-react'
 
 export default function ContactHero() {
   return (
@@ -11,7 +10,7 @@ export default function ContactHero() {
       <motion.div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1423666639041-f56000c27a9a?q=80&w=2074&auto=format&fit=crop')",
+          backgroundImage: "url('/hero-contact.avif')",
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
@@ -47,19 +46,6 @@ export default function ContactHero() {
           </Button>
         </motion.div>
       </div>
-      <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20"
-        animate={{
-          y: [0, 10, 0],
-        }}
-        transition={{
-          duration: 1.5,
-          repeat: Infinity,
-          repeatType: "reverse",
-        }}
-      >
-        <ChevronDown className="w-8 h-8 text-white" />
-      </motion.div>
     </section>
   )
 }

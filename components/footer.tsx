@@ -1,171 +1,109 @@
-"use client";
+import Link from 'next/link'
+import { Facebook, Youtube } from 'lucide-react'
+import Image from 'next/image'
 
-import { useState, useEffect } from "react";
-import Link from "next/link";
-import { Facebook, Youtube, ChevronUp } from "lucide-react";
-import Image from "next/image";
-import { motion, AnimatePresence } from "framer-motion";
+const footerSections = [
+  {
+    title: 'Information',
+    links: [
+      { href: '/', label: 'Home' },
+      { href: '/about', label: 'About Us' },
+      { href: '/contact', label: 'Contact Us' },
+      { href: '/privacy-policy', label: 'Privacy Policy' },
+      { href: '/terms-and-conditions', label: 'Terms and Conditions' },
+      { href: '/cookies', label: 'Cookies' },
+      { href: '/sitemap', label: 'Sitemap' },
+    ],
+  },
+  {
+    title: 'Registered Address',
+    content: [
+      'Registered in England and Wales.',
+      'Registration # 12039916',
+      '53 Rodney Crescent, Filton,',
+      'Bristol BS34 7AF',
+      'United Kingdom',
+    ],
+  },
+]
+
+const socialLinks = [
+  { icon: Facebook, label: 'Facebook', href: 'https://www.facebook.com/people/Vellio-Properties/61567786766589/' },
+  { icon: Youtube, label: 'YouTube', href: 'https://www.youtube.com/@VellioPropertiesLtd' },
+]
 
 export function Footer() {
-  const currentYear = new Date().getFullYear();
-  const [expandedSection, setExpandedSection] = useState<string | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  const footerSections = [
-    {
-      title: "Information",
-      links: [
-        { href: "/", label: "Home" },
-        { href: "/about", label: "About Us" },
-        { href: "/contact", label: "Contact Us" },
-        { href: "/privacy-policy", label: "Privacy Policy" },
-        { href: "/terms-and-conditions", label: "Terms and Conditions" },
-        { href: "/cookies", label: "Cookies" },
-        { href: "/sitemap", label: "Sitemap" },
-      ],
-    },
-    {
-      title: "Registered Address",
-      content: [
-        "Registered in England and Wales.",
-        "Registration # 16033278",
-        "53 Rodney Crescent, Filton,",
-        "Bristol BS34 7AF",
-        "United Kingdom",
-      ],
-    },
-  ];
-
-  const toggleSection = (title: string) => {
-    setExpandedSection(expandedSection === title ? null : title);
-  };
+  const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="w-full bg-gradient-to-b from-[#003366] to-[#00447D] text-white">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
-          <motion.div
-            className="space-y-6"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.2 }}
-          >
+    <footer className="w-full bg-white text-[#00447D] border-t border-gray-200">
+      <div className="container mx-auto px-4 py-12 md:py-16">
+        <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="space-y-4">
             <Link href="/" className="inline-block">
-              <Image
+              <Image 
                 src="/logo_blue.png"
                 alt="Vellio Properties Ltd"
                 width={180}
                 height={40}
-                className="h-10 w-auto brightness-0 invert"
+                className="h-10 w-auto"
               />
             </Link>
-            <p className="text-sm text-blue-100 leading-relaxed">
-              Vellio Properties is a leading real estate investment firm focused
-              on high-potential properties across the UK. We're committed to
-              transforming the property landscape with innovative and
-              sustainable solutions.
+            <p className="text-sm leading-relaxed text-gray-600">
+              Vellio Properties is a leading real estate investment firm focused on high-potential properties across the UK. We're committed to transforming the property landscape with innovative and sustainable solutions.
             </p>
-            <div className="flex space-x-4">
-              {[
-                {
-                  Icon: Facebook,
-                  url: "https://www.facebook.com/people/Vellio-Properties/61567786766589/",
-                },
-                {
-                  Icon: Youtube,
-                  url: "https://www.youtube.com/@VellioPropertiesLtd",
-                },
-              ].map(({ Icon, url }, index) => (
-                <motion.a
-                  key={index}
-                  href={url}
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-[#00447D]">Information</h3>
+            <nav className="flex flex-col space-y-2">
+              {footerSections[0]?.links?.map((link) => (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-gray-600 hover:text-[#00447D] transition-colors duration-300"
+                >
+                  {link.label}
+                </Link>
+              ))}
+            </nav>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-[#00447D]">Follow Us</h3>
+            <div className="flex flex-col space-y-2">
+              {socialLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-blue-100 hover:text-white transition-colors bg-blue-800 p-2 rounded-full"
-                  whileHover={{ scale: 1.1, backgroundColor: "#1d4ed8" }}
-                  whileTap={{ scale: 0.9 }}
-                  aria-label={`${Icon.name} link`}
+                  className="flex items-center space-x-2 text-gray-600 hover:text-[#00447D] transition-colors duration-300"
                 >
-                  <Icon className="h-5 w-5" />
-                </motion.a>
+                  <link.icon className="h-5 w-5" />
+                  <span>{link.label}</span>
+                </a>
               ))}
             </div>
-          </motion.div>
+          </div>
 
-          {footerSections.map((section, index) => (
-            <motion.div
-              key={section.title}
-              className="space-y-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.3 + index * 0.1 }}
-            >
-              <button
-                onClick={() => isMobile && toggleSection(section.title)}
-                className="flex items-center justify-between w-full text-left md:cursor-default"
-              >
-                <h3 className="text-lg font-semibold">{section.title}</h3>
-                {isMobile && (
-                  <ChevronUp
-                    className={`h-5 w-5 transition-transform ${
-                      expandedSection === section.title ? "rotate-180" : ""
-                    }`}
-                  />
-                )}
-              </button>
-              <AnimatePresence>
-                {(!isMobile || expandedSection === section.title) && (
-                  <motion.div
-                    initial={isMobile ? { height: 0, opacity: 0 } : false}
-                    animate={isMobile ? { height: "auto", opacity: 1 } : false}
-                    exit={isMobile ? { height: 0, opacity: 0 } : undefined}
-                    transition={{ duration: 0.3 }}
-                    className="overflow-hidden"
-                  >
-                    {"links" in section ? (
-                      <nav className="grid grid-cols-2 gap-2">
-                        {section?.links?.map((link) => (
-                          <Link
-                            key={link.href}
-                            href={link.href}
-                            className="text-sm text-blue-100 hover:text-white transition-colors"
-                          >
-                            {link.label}
-                          </Link>
-                        ))}
-                      </nav>
-                    ) : (
-                      <div className="flex flex-col gap-2 text-sm text-blue-100">
-                        {section.content.map((item, i) => (
-                          <p key={i}>{item}</p>
-                        ))}
-                      </div>
-                    )}
-                  </motion.div>
-                )}
-              </AnimatePresence>
-            </motion.div>
-          ))}
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-[#00447D]">Registered Address</h3>
+            <div className="text-sm text-gray-600 space-y-1">
+              {footerSections[1]?.content?.map((item, i) => (
+                <p key={i}>{item}</p>
+              ))}
+            </div>
+          </div>
         </div>
 
-        <motion.div
-          className="mt-12 border-t border-blue-400 pt-8 text-center"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
-        >
-          <p className="text-sm text-blue-100">
-            © 2024-2025 Vellio Properties LTD. All rights reserved.
+        <div className="mt-12 pt-8 text-center border-t border-gray-200">
+          <p className="text-sm text-gray-600">
+            © 2024-{currentYear} Vellio Properties LTD. All rights reserved.
           </p>
-        </motion.div>
+        </div>
       </div>
     </footer>
-  );
+  )
 }
+

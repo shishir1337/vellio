@@ -3,15 +3,14 @@
 import { motion } from 'framer-motion'
 import { Button } from '@/components/ui/button'
 import Link from 'next/link'
-import { ChevronDown } from 'lucide-react'
 
 export default function AboutHero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section className="relative min-h-[60vh] flex items-center justify-center overflow-hidden">
       <motion.div 
         className="absolute inset-0 z-0"
         style={{
-          backgroundImage: "url('https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop')",
+          backgroundImage: "url('/hero-banner.avif')",
           backgroundPosition: 'center',
           backgroundSize: 'cover',
         }}
@@ -47,19 +46,6 @@ export default function AboutHero() {
           </Button>
         </motion.div>
       </div>
-      <motion.div 
-        className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20"
-        animate={{
-          y: [0, 10, 0],
-        }}
-        transition={{
-          duration: 1.5,
-          repeat: Infinity,
-          repeatType: "reverse",
-        }}
-      >
-        <ChevronDown className="w-8 h-8 text-white" />
-      </motion.div>
     </section>
   )
 }

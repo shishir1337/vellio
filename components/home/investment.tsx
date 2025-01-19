@@ -25,7 +25,7 @@ export default function Investment() {
   }, [controls, inView])
 
   return (
-    <section className="py-20 md:py-32 bg-gradient-to-b from-white to-blue-50">
+    <section className="py-12 md:py-20 bg-gradient-to-b from-white to-blue-50">
       <div className="container">
         <motion.div 
           className="max-w-3xl mx-auto text-center mb-16"
