@@ -1,27 +1,27 @@
-'use client'
+"use client";
 
-import { Button } from '@/components/ui/button'
-import Link from 'next/link'
-import Image from 'next/image'
-import { useEffect, useState } from 'react'
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Image from "next/image";
+import { useEffect, useState } from "react";
 
 export default function Hero() {
-  const [typedText, setTypedText] = useState('')
-  const fullText = "Transforming the UK Property Market"
+  const [typedText, setTypedText] = useState("");
+  const fullText = "Transforming the UK Property Market";
 
   useEffect(() => {
-    let i = 0
+    let i = 0;
     const typingInterval = setInterval(() => {
       if (i < fullText.length) {
-        setTypedText(fullText.slice(0, i + 1))
-        i++
+        setTypedText(fullText.slice(0, i + 1));
+        i++;
       } else {
-        clearInterval(typingInterval)
+        clearInterval(typingInterval);
       }
-    }, 100)
+    }, 100);
 
-    return () => clearInterval(typingInterval)
-  }, [])
+    return () => clearInterval(typingInterval);
+  }, []);
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-[#003366] via-[#00447D] to-[#005292] py-20 md:py-32 flex items-center">
@@ -38,18 +38,24 @@ export default function Hero() {
               </span>
             </h1>
             <p className="text-lg text-blue-100 sm:text-xl md:text-2xl max-w-2xl mx-auto lg:mx-0">
-              Investing in properties across the UK to create premier, high-quality developments
+              Investing and managing properties across the UK to redefine the
+              real estate industry
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-              <Button asChild size="lg" className="bg-white text-[#00447D] hover:bg-blue-50 text-base transition-all duration-300 ease-in-out hover:scale-105 shadow-lg hover:shadow-xl">
-                <Link href="/about">
-                  Learn More
-                </Link>
+              <Button
+                asChild
+                size="lg"
+                className="bg-white text-[#00447D] hover:bg-blue-50 text-base transition-all duration-300 ease-in-out hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <Link href="/about">Learn More</Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="bg-transparent text-white border-white hover:bg-white/10 text-base transition-all duration-300 ease-in-out hover:scale-105 backdrop-blur-sm">
-                <Link href="/contact">
-                  Contact Us
-                </Link>
+              <Button
+                asChild
+                size="lg"
+                variant="outline"
+                className="bg-transparent text-white border-white hover:bg-white/10 text-base transition-all duration-300 ease-in-out hover:scale-105 backdrop-blur-sm"
+              >
+                <Link href="/contact">Contact Us</Link>
               </Button>
             </div>
           </div>
@@ -71,6 +77,5 @@ export default function Hero() {
         </div>
       </div>
     </section>
-  )
+  );
 }
-

@@ -34,7 +34,7 @@ export default function OurGoals() {
         >
           <h2 className="font-bodoni text-4xl md:text-5xl font-bold mb-6 text-[#00447D]">Our Goals</h2>
           <p className="text-lg text-muted-foreground">
-            Becoming one of the UK's leading property investment and management companies, achieving a valuation of £10 million by 2050.
+            Becoming one of the UK's leading property investment and management companies, achieving a portfolio of £10 million by 2035.
           </p>
         </motion.div>
         <div className="grid md:grid-cols-3 gap-8">

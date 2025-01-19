@@ -9,10 +9,13 @@ const AboutHero = dynamic(() => import('@/components/about/hero'), {
 const OurStory = dynamic(() => import('@/components/about/our-story'), {
   loading: () => <Skeleton className="w-full h-96" />,
 })
-const OurValues = dynamic(() => import('@/components/about/our-values'), {
+const OurGoals = dynamic(() => import('@/components/about/our-goals'), {
   loading: () => <Skeleton className="w-full h-96" />,
 })
-const OurGoals = dynamic(() => import('@/components/about/our-goals'), {
+const OurVision = dynamic(() => import('@/components/about/our-vision'), {
+  loading: () => <Skeleton className="w-full h-96" />,
+})
+const OurValues = dynamic(() => import('@/components/about/our-values'), {
   loading: () => <Skeleton className="w-full h-96" />,
 })
 const JoinOurJourney = dynamic(() => import('@/components/about/join-our-journey'), {
@@ -32,10 +35,13 @@ export default function About() {
         <OurStory />
       </Suspense>
       <Suspense fallback={<Skeleton className="w-full h-96" />}>
-        <OurValues />
+        <OurGoals />
       </Suspense>
       <Suspense fallback={<Skeleton className="w-full h-96" />}>
-        <OurGoals />
+        <OurVision />
+      </Suspense>
+      <Suspense fallback={<Skeleton className="w-full h-96" />}>
+        <OurValues />
       </Suspense>
       <Suspense fallback={<Skeleton className="w-full h-96" />}>
         <JoinOurJourney />
