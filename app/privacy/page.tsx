@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Privacy Policy | Vellio Properties',
+  title: 'Privacy Policy',
   description: 'Learn about how Vellio Properties collects, uses, and protects your personal information.',
 }
 

@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Terms and Conditions | Vellio Properties Ltd",
+  title: "Terms and Conditions",
   description:
     "Read the terms and conditions for using Vellio Properties Ltd services and website.",
 };

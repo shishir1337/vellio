@@ -23,7 +23,7 @@ const JoinOurJourney = dynamic(() => import('@/components/about/join-our-journey
 })
 
 export const metadata: Metadata = {
-  title: 'About Us | Vellio Properties Ltd',
+  title: 'About Us',
   description: 'Learn about Vellio Properties, our mission, values, goals, and our commitment to smart property management solutions in the UK.',
 }
 
