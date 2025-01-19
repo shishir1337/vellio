@@ -1,40 +1,46 @@
-'use client'
+"use client";
 
-import { useRef } from 'react'
-import { motion, useInView, useScroll, useTransform } from 'framer-motion'
-import { TrendingUp, Users, Building } from 'lucide-react'
+import { useRef } from "react";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
+import { TrendingUp, Users, Building } from "lucide-react";
 
 const visionPoints = [
   {
-    title: "Strategic Investment",
-    description: "Identifying and investing in UK properties with high growth potential and long-term value.",
+    title: "Transforming Lives",
+    description:
+      "Shaping the future of the UK’s real estate industry by empowering communities through our investment and management efforts.",
     icon: TrendingUp,
   },
   {
-    title: "Lifting Communities",
-    description: "Focused on uplifting local communities through thoughtful investments and management.",
+    title: "Pioneering Progress",
+    description:
+      "Through innovation and fresh ideas for the real estate industry, we aim to lead the industry, setting new standards for other companies.",
     icon: Users,
   },
   {
-    title: "Building UK's Future",
-    description: "Leaving a lasting positive impact on the UK real estate industry.",
+    title: "Sustainable Legacy",
+    description:
+      "By fostering collaboration and adopting sustainable practices, we are committed to leaving a positive, lasting impact on all our projects.",
     icon: Building,
   },
-]
+];
 
 export default function Vision() {
-  const ref = useRef(null)
-  const isInView = useInView(ref, { once: true, amount: 0.2 })
+  const ref = useRef(null);
+  const isInView = useInView(ref, { once: true, amount: 0.2 });
   const { scrollYProgress } = useScroll({
     target: ref,
-    offset: ["start end", "end start"]
-  })
+    offset: ["start end", "end start"],
+  });
 
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ['0%', '100%'])
+  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
 
   return (
-    <section ref={ref} className="py-20 md:py-32 bg-gradient-to-br from-[#00447D] to-[#003366] text-white relative overflow-hidden bg-opacity-90 bg-pattern">
-      <motion.div 
+    <section
+      ref={ref}
+      className="py-20 md:py-32 bg-gradient-to-br from-[#00447D] to-[#003366] text-white relative overflow-hidden bg-opacity-90 bg-pattern"
+    >
+      <motion.div
         className="absolute inset-0 bg-[url('/subtle-pattern.png')] bg-repeat opacity-10"
         style={{ y: backgroundY }}
         animate={{
@@ -47,7 +53,7 @@ export default function Vision() {
         }}
       />
       <div className="container relative z-10">
-        <motion.div 
+        <motion.div
           className="mx-auto max-w-3xl text-center mb-16"
           initial={{ opacity: 0, y: 50 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
@@ -63,20 +69,21 @@ export default function Vision() {
             />
           </h2>
           <p className="sm:text-lg text-blue-100">
-            Becoming one of the UK's top property managers by driving eco-friendly community development.
+            Shaping the future of the UK’s real estate industry by empowering
+            communities through our investment and management efforts.
           </p>
         </motion.div>
         <div className="grid gap-10 md:grid-cols-3">
           {visionPoints.map((point, index) => (
-            <motion.div 
-              key={index} 
+            <motion.div
+              key={index}
               className="flex flex-col items-center text-center space-y-4 bg-white/10 p-8 rounded-2xl backdrop-blur-sm transition-all duration-300"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.2 }}
               whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
             >
-              <motion.div 
+              <motion.div
                 className="rounded-full bg-blue-400 p-3"
                 whileHover={{ rotate: 360 }}
                 transition={{ duration: 0.6 }}
@@ -102,6 +109,5 @@ export default function Vision() {
         }}
       />
     </section>
-  )
+  );
 }
-

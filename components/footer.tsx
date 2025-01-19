@@ -35,7 +35,7 @@ export function Footer() {
       title: "Registered Address",
       content: [
         "Registered in England and Wales.",
-        "Registration # 12039916",
+        "Registration # 16033278",
         "53 Rodney Crescent, Filton,",
         "Bristol BS34 7AF",
         "United Kingdom",
