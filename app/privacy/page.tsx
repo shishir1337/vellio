@@ -77,7 +77,7 @@ export default function PrivacyPolicy() {
         </table>
 
         <p className='font-semibold'>2. In this privacy policy, unless the context requires a different interpretation:</p>
-        <ul>
+        <ul className="list-lower-alpha pl-6 space-y-2">
           <li>1. the singular includes the plural and vice versa;</li>
           <li>2. references to sub-clauses, clauses, schedules or appendices are to sub-clauses, clauses, schedules or appendices of this privacy policy;</li>
           <li>3. a reference to a person includes firms, companies, government entities, trusts and partnerships;</li>
@@ -96,7 +96,7 @@ export default function PrivacyPolicy() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Data collected</h2>
         <p>5. We may collect the following Data, which includes personal Data, from you:</p>
-        <ul>
+        <ul className="list-lower-alpha pl-6 space-y-2">
           <li>1. name;</li>
           <li>2. date of birth;</li>
           <li>3. gender;</li>
@@ -114,7 +114,7 @@ export default function PrivacyPolicy() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">How we collect Data</h2>
         <p>6. We collect Data in the following ways:</p>
-        <ul>
+        <ul className="list-lower-alpha pl-6 space-y-2">
           <li>1. data is given to us by you;</li>
           <li>2. data is received from other sources; and</li>
           <li>3. data is collected automatically.</li>
@@ -122,7 +122,7 @@ export default function PrivacyPolicy() {
 
         <h3 className="text-xl font-semibold mt-6 mb-3">Data that is given to us by you</h3>
         <p>7. Vellio Properties Ltd will collect your Data in a number of ways, for example:</p>
-        <ul>
+        <ul className="list-lower-alpha pl-6 space-y-2">
           <li>1. when you contact us through the Website, by telephone, post, e-mail or through any other means;</li>
           <li>2. when you register with us and set up an account to receive our products/services;</li>
           <li>3. when you complete surveys that we use for research purposes (although you are not obliged to respond to them);</li>
@@ -135,31 +135,31 @@ export default function PrivacyPolicy() {
 
         <h3 className="text-xl font-semibold mt-6 mb-3">Data that is received from third parties</h3>
         <p>8. Vellio Properties Ltd will receive Data about you from the following third parties:</p>
-        <ul>
+        <ul className="list-lower-alpha pl-6 space-y-2">
           <li>1. affiliate and sister companies;</li>
         </ul>
 
         <h3 className="text-xl font-semibold mt-6 mb-3">Data that is collected automatically</h3>
         <p>9. To the extent that you access the Website, we will collect your Data automatically, for example:</p>
-        <ul>
+        <ul className="list-lower-alpha pl-6 space-y-2">
           <li>1. we automatically collect some information about your visit to the Website. This information helps us to make improvements to Website content and navigation, and includes your IP address, the date, times and frequency with which you access the Website and the way you use and interact with its content.</li>
           <li>2. we will collect your Data automatically via cookies, in line with the cookie settings on your browser. For more information about cookies, and how we use them on the Website, see the section below, headed "Cookies".</li>
         </ul>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Our use of Data</h2>
         <p>10. Any or all of the above Data may be required by us from time to time in order to provide you with the best possible service and experience when using our Website. Specifically, Data may be used by us for the following reasons:</p>
-        <ul>
+        <ul className="list-lower-alpha pl-6 space-y-2">
           <li>1. internal record keeping;</li>
           <li>2. improvement of our products / services;</li>
           <li>3. transmission by email of marketing materials that may be of interest to you;</li>
           <li>4. contact for market research purposes which may be done using email, telephone, fax or mail. Such information may be used to customise or update the Website;</li>
         </ul>
-        <p>in each case, in accordance with this privacy policy.</p>
+        <p>in each case, in accordance with this privacy policy.</p><br />
 
         <p>11. We may use your Data for the above purposes if we deem it necessary to do so for our legitimate interests. If you are not satisfied with this, you have the right to object in certain circumstances (see the section headed "Your rights" below).</p>
 
         <p>12. For the delivery of direct marketing to you via e-mail, we'll need your consent, whether via an opt-in or soft-opt-in:</p>
-        <ul>
+        <ul className="list-lower-alpha pl-6 space-y-2">
           <li>1. soft opt-in consent is a specific type of consent which applies when you have previously engaged with us (for example, you contact us to ask us for more details about a particular product/service, and we are marketing similar products/services). Under "soft opt-in" consent, we will take your consent as given unless you opt-out.</li>
           <li>2. for other types of e-marketing, we are required to obtain your explicit consent; that is, you need to take positive and affirmative action when consenting by, for example, checking a tick box that we'll provide.</li>
           <li>3. if you are not satisfied about our approach to marketing, you have the right to withdraw consent at any time. To find out how to withdraw your consent, see the section headed "Your rights" below.</li>
@@ -169,7 +169,7 @@ export default function PrivacyPolicy() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Who we share Data with</h2>
         <p>14. We may share your Data with the following groups of people for the following reasons:</p>
-        <ul>
+        <ul className="list-lower-alpha pl-6 space-y-2">
           <li>1. any of our group companies or affiliates – to ensure the proper administration of website and business;</li>
           <li>2. our employees, agents and/or professional advisors – to obtain advice from professional advisers, admin, research and marketing purposes;</li>
           <li>3. third party service providers who provide services to us which require the processing of personal data – to help third party service providers in receipt of any shared data to perform functions on our behalf to help ensure the website runs smoothly;</li>
@@ -182,7 +182,7 @@ export default function PrivacyPolicy() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Keeping Data secure</h2>
         <p>15. We will use technical and organisational measures to safeguard your Data, for example:</p>
-        <ul>
+        <ul className="list-lower-alpha pl-6 space-y-2">
           <li>1. access to your account is controlled by a password and a user name that is unique to you.</li>
           <li>2. we store your Data on secure servers.</li>
           <li>3. payment details are encrypted using SSL technology (typically you will see a lock icon or green address bar (or both) in your browser when we use this technology.</li>
@@ -196,7 +196,7 @@ export default function PrivacyPolicy() {
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Your rights</h2>
         <p>20. You have the following rights in relation to your Data:</p>
-        <ul>
+        <ul className="list-lower-alpha pl-6 space-y-2">
           <li><strong>1. Right to access</strong> – the right to request (i) copies of the information we hold about you at any time, or (ii) that we modify, update or delete such information. If we provide you with access to the information we hold about you, we will not charge you for this, unless your request is "manifestly unfounded or excessive." Where we are legally permitted to do so, we may refuse your request. If we refuse your request, we will tell you the reasons why.</li>
           <li><strong>2. Right to correct</strong> – the right to have your Data rectified if it is inaccurate or incomplete.</li>
           <li><strong>3. Right to erase</strong> – the right to request that we delete or remove your Data from our systems.</li>

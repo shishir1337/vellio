@@ -9,7 +9,7 @@ const footerSections = [
       { href: '/', label: 'Home' },
       { href: '/about', label: 'About Us' },
       { href: '/contact', label: 'Contact Us' },
-      { href: '/privacy-policy', label: 'Privacy Policy' },
+      { href: '/privacy', label: 'Privacy Policy' },
       { href: '/terms-and-conditions', label: 'Terms and Conditions' },
       { href: '/cookies', label: 'Cookies' },
       { href: '/sitemap', label: 'Sitemap' },

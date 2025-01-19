@@ -10,7 +10,7 @@ const pages = [
   { name: 'Home', path: '/' },
   { name: 'About', path: '/about' },
   { name: 'Contact', path: '/contact' },
-  { name: 'Privacy Policy', path: '/privacy-policy' },
+  { name: 'Privacy Policy', path: '/privacy' },
   { name: 'Terms and Conditions', path: '/terms-and-conditions' },
   { name: 'Cookies Policy', path: '/cookies' },
 ]
