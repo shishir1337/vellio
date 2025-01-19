@@ -15,15 +15,13 @@ const ContactForm = dynamic(() => import('@/components/contact/form'), {
 
 export const metadata: Metadata = {
   title: 'Contact Us | Vellio Properties Ltd',
-  description: 'Get in touch with Vellio Properties Ltd to explore investment opportunities and transform the UK property market together.',
+  description: 'Get in touch with Vellio Properties to explore investment opportunities and transform the UK property market together.',
 }
 
 export default function Contact() {
   return (
     <>
-      <Suspense fallback={<Skeleton className="w-full h-screen" />}>
-        <ContactHero />
-      </Suspense>
+      <ContactHero />
       <section id="contact-us" className="py-20 md:py-32 bg-white">
         <div className="container">
           <Suspense fallback={<Skeleton className="w-full h-96" />}>

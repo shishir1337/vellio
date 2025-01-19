@@ -36,32 +36,32 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="w-full bg-white text-[#00447D] border-t border-gray-200">
+    <footer className="w-full bg-primary text-white border-t border-primary/20">
       <div className="container mx-auto px-4 py-12 md:py-16">
         <div className="grid gap-8 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <Link href="/" className="inline-block">
               <Image 
-                src="/logo_blue.png"
-                alt="Vellio Properties Ltd"
+                src="/logo_white.png"
+                alt="Vellio Properties"
                 width={180}
                 height={40}
                 className="h-10 w-auto"
               />
             </Link>
-            <p className="text-sm leading-relaxed text-gray-600">
+            <p className="text-sm leading-relaxed text-white/80">
               Vellio Properties is a leading real estate investment firm focused on high-potential properties across the UK. We're committed to transforming the property landscape with innovative and sustainable solutions.
             </p>
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-[#00447D]">Information</h3>
+            <h3 className="text-lg font-semibold text-white">Information</h3>
             <nav className="flex flex-col space-y-2">
               {footerSections[0]?.links?.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-sm text-gray-600 hover:text-[#00447D] transition-colors duration-300"
+                  className="text-sm text-white/80 hover:text-white transition-colors duration-300"
                 >
                   {link.label}
                 </Link>
@@ -70,7 +70,7 @@ export function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-[#00447D]">Follow Us</h3>
+            <h3 className="text-lg font-semibold text-white">Follow Us</h3>
             <div className="flex flex-col space-y-2">
               {socialLinks.map((link) => (
                 <a
@@ -78,7 +78,7 @@ export function Footer() {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center space-x-2 text-gray-600 hover:text-[#00447D] transition-colors duration-300"
+                  className="flex items-center space-x-2 text-white/80 hover:text-white transition-colors duration-300"
                 >
                   <link.icon className="h-5 w-5" />
                   <span>{link.label}</span>
@@ -88,8 +88,8 @@ export function Footer() {
           </div>
 
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-[#00447D]">Registered Address</h3>
-            <div className="text-sm text-gray-600 space-y-1">
+            <h3 className="text-lg font-semibold text-white">Registered Address</h3>
+            <div className="text-sm text-white/80 space-y-1">
               {footerSections[1]?.content?.map((item, i) => (
                 <p key={i}>{item}</p>
               ))}
@@ -97,8 +97,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 text-center border-t border-gray-200">
-          <p className="text-sm text-gray-600">
+        <div className="mt-12 pt-8 text-center border-t border-white/20">
+          <p className="text-sm text-white/80">
             © 2024-{currentYear} Vellio Properties LTD. All rights reserved.
           </p>
         </div>

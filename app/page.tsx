@@ -15,16 +15,14 @@ const Features = dynamic(() => import('@/components/home/features'), {
 
 
 export const metadata: Metadata = {
-  title: 'Vellio Properties Ltd | Transforming the UK Property Market',
-  description: 'Vellio Properties Ltd invests in and develops premier, high-quality properties across the UK, revolutionizing the real estate market through smart investment and management.',
+  title: 'Vellio Properties | Transforming the UK Property Market',
+  description: 'Vellio Properties invests in and develops premier, high-quality properties across the UK, revolutionizing the real estate market through smart investment and management.',
 }
 
 export default function Home() {
   return (
     <>
-      <Suspense fallback={<Skeleton className="w-full h-screen" />}>
-        <Hero />
-      </Suspense>
+      <Hero />
       <Suspense fallback={<Skeleton className="w-full h-96" />}>
         <Investment />
       </Suspense>
