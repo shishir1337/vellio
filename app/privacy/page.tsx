@@ -130,7 +130,7 @@ export default function PrivacyPolicy() {
           <li>5. when you make payments to us, through this Website or otherwise;</li>
           <li>6. when you elect to receive marketing communications from us;</li>
           <li>7. when you use our services;</li>
-        </ul>
+        </ul><br />
         <p>in each case, in accordance with this privacy policy.</p>
 
         <h3 className="text-xl font-semibold mt-6 mb-3">Data that is received from third parties</h3>
@@ -153,7 +153,7 @@ export default function PrivacyPolicy() {
           <li>2. improvement of our products / services;</li>
           <li>3. transmission by email of marketing materials that may be of interest to you;</li>
           <li>4. contact for market research purposes which may be done using email, telephone, fax or mail. Such information may be used to customise or update the Website;</li>
-        </ul>
+        </ul><br />
         <p>in each case, in accordance with this privacy policy.</p><br />
 
         <p>11. We may use your Data for the above purposes if we deem it necessary to do so for our legitimate interests. If you are not satisfied with this, you have the right to object in certain circumstances (see the section headed "Your rights" below).</p>
@@ -177,7 +177,7 @@ export default function PrivacyPolicy() {
           <li>5. relevant authorities – to facilitate the detection and prevention of fraud, crime or the collection of taxes or duties;</li>
           <li>6. NinjaTrader – for the purpose of providing effective service .</li>
           <li>7. Kinetick – for the purpose of providing effective service.</li>
-        </ul>
+        </ul><br />
         <p>in each case, in accordance with this privacy policy.</p>
 
         <h2 className="text-2xl font-semibold mt-8 mb-4">Keeping Data secure</h2>
