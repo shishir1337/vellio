@@ -14,9 +14,9 @@ const Features = dynamic(() => import("@/components/home/features"), {
 })
 
 export const metadata: Metadata = {
-  title: "Vellio Properties | Transforming the UK Property Market",
+  title: "Vellio Properties: UK Property Investment and Management",
   description:
-    "Vellio Properties invests in and develops premier, high-quality properties across the UK, revolutionizing the real estate market through smart investment and management.",
+    "Vellio Properties is a property investment and management company operating in the UK to redefine the real estate market and uplift communities and businesses.",
 }
 
 export default function Home() {

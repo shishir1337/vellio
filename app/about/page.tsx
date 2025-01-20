@@ -24,7 +24,7 @@ const JoinOurJourney = dynamic(() => import('@/components/about/join-our-journey
 
 export const metadata: Metadata = {
   title: 'About Us',
-  description: 'Learn about Vellio Properties, our mission, values, goals, and our commitment to smart property management solutions in the UK.',
+  description: 'We are a growing property investment and management company in the UK, operating in all locations within the country.  ',
 }
 
 export default function About() {

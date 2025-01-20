@@ -15,7 +15,7 @@ const ContactForm = dynamic(() => import('@/components/contact/form'), {
 
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description: 'Get in touch with Vellio Properties to explore investment opportunities and transform the UK property market together.',
+  description: 'Get in touch with Vellio Properties.',
 }
 
 export default function Contact() {

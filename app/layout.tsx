@@ -17,11 +17,11 @@ const bodoni = Bodoni_Moda({
 
 export const metadata: Metadata = {
   title: {
-    default: "Vellio Properties Ltd. | UK Real Estate Investment",
-    template: "%s | Vellio Properties Ltd",
+    default: "Vellio Properties: UK Property Investment and Management",
+    template: "%s | Vellio Properties",
   },
   description:
-    "Vellio Properties Ltd is a leading real estate investment firm focused on high-potential properties across the UK.",
+    "Vellio Properties is a property investment and management company operating in the UK to redefine the real estate market and uplift communities and businesses.",
   keywords: [
     "real estate",
     "property investment",

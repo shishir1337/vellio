@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://vellioproperties.com/sitemap.xml
+
+# Disallow admin and api routes
+Disallow: /api/*
+
