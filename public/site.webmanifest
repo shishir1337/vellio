@@ -1,6 +1,6 @@
 {
     "name": "Vellio Properties Ltd",
-    "short_name": "Vellio Properties",
+    "short_name": "Vellio",
     "description": "UK Real Estate Investment and Property Management",
     "icons": [
       {
@@ -16,7 +16,9 @@
     ],
     "theme_color": "#00447D",
     "background_color": "#ffffff",
-    "display": "standalone"
+    "display": "standalone",
+    "start_url": "/",
+    "orientation": "portrait"
   }
   
   
