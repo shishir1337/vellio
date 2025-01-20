@@ -1,74 +1,78 @@
-import { GeistSans } from 'geist/font/sans'
-import { Bodoni_Moda } from 'next/font/google'
-import { Metadata } from 'next'
-import { cn } from '@/lib/utils'
-import { Header } from '@/components/header'
-import { Footer } from '@/components/footer'
-import { ScrollToTop } from '@/components/scroll-to-top'
-import { GoogleAnalytics } from '@next/third-parties/google'
-import { Toaster } from "@/components/ui/toaster"
-import Script from 'next/script'
-import './globals.css'
+import { GeistSans } from "geist/font/sans";
+import { Bodoni_Moda } from "next/font/google";
+import type { Metadata } from "next";
+import { cn } from "@/lib/utils";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { ScrollToTop } from "@/components/scroll-to-top";
+import { Toaster } from "@/components/ui/toaster";
+import Script from "next/script";
+import "./globals.css";
 
-const bodoni = Bodoni_Moda({ 
-  subsets: ['latin'],
-  variable: '--font-bodoni',
-  display: 'swap',
-})
+const bodoni = Bodoni_Moda({
+  subsets: ["latin"],
+  variable: "--font-bodoni",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: {
-    default: 'Vellio Properties Ltd. | UK Real Estate Investment',
-    template: '%s | Vellio Properties Ltd'
+    default: "Vellio Properties Ltd. | UK Real Estate Investment",
+    template: "%s | Vellio Properties Ltd",
   },
-  description: 'Vellio Properties Ltd is a leading real estate investment firm focused on high-potential properties across the UK.',
-  keywords: ['real estate', 'property investment', 'UK property', 'Vellio Properties Ltd'],
-  authors: [{ name: 'Vellio Properties Ltd' }],
-  creator: 'Vellio Properties Ltd',
+  description:
+    "Vellio Properties Ltd is a leading real estate investment firm focused on high-potential properties across the UK.",
+  keywords: [
+    "real estate",
+    "property investment",
+    "UK property",
+    "Vellio Properties Ltd",
+  ],
+  authors: [{ name: "Vellio Properties Ltd" }],
+  creator: "Vellio Properties Ltd",
   openGraph: {
-    type: 'website',
-    locale: 'en_GB',
-    url: 'https://www.vellioproperties.com',
-    siteName: 'Vellio Properties Ltd',
-    title: 'Vellio Properties Ltd | UK Real Estate Investment',
-    description: 'Vellio Properties Ltd is a leading real estate investment firm focused on high-potential properties across the UK.',
+    type: "website",
+    locale: "en_GB",
+    url: "https://www.vellioproperties.com",
+    siteName: "Vellio Properties Ltd",
+    title: "Vellio Properties Ltd | UK Real Estate Investment",
+    description:
+      "Vellio Properties Ltd is a leading real estate investment firm focused on high-potential properties across the UK.",
     images: [
       {
-        url: 'https://www.vellioproperties.com/og-image.jpg',
+        url: "https://www.vellioproperties.com/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: 'Vellio Properties Ltd',
+        alt: "Vellio Properties Ltd",
       },
     ],
   },
   twitter: {
-    card: 'summary_large_image',
-    title: 'Vellio Properties Ltd | UK Real Estate Investment',
-    description: 'Vellio Properties Ltd is a leading real estate investment firm focused on high-potential properties across the UK.',
-    images: ['https://www.vellioproperties.com/twitter-image.jpg'],
-    creator: '@VellioProperties',
+    card: "summary_large_image",
+    title: "Vellio Properties Ltd | UK Real Estate Investment",
+    description:
+      "Vellio Properties Ltd is a leading real estate investment firm focused on high-potential properties across the UK.",
+    images: ["https://www.vellioproperties.com/twitter-image.jpg"],
+    creator: "@VellioProperties",
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon-16x16.png',
-    apple: '/apple-touch-icon.png',
+    icon: "/favicon.ico",
+    shortcut: "/favicon-16x16.png",
+    apple: "/apple-touch-icon.png",
   },
-  manifest: '/site.webmanifest',
+  manifest: "/site.webmanifest",
   verification: {
-    google: 'L_Y1xSCSyc-7V5jPYqpZ5N9qGttMhN0AdYNs6OrMof8',
+    google: "L_Y1xSCSyc-7V5jPYqpZ5N9qGttMhN0AdYNs6OrMof8",
   },
-}
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn(
-      GeistSans.variable,
-      bodoni.variable,
-    )}>
+    <html lang="en" className={cn(GeistSans.variable, bodoni.variable)}>
       <head>
         <link rel="manifest" href="/site.webmanifest" />
         <Script id="google-tag-manager" strategy="afterInteractive">
@@ -86,36 +90,44 @@ export default function RootLayout({
             __html: JSON.stringify({
               "@context": "https://schema.org",
               "@type": "Organization",
-              "name": "Vellio Properties Ltd",
-              "url": "https://www.vellioproperties.com",
-              "logo": "https://www.vellioproperties.com/logo.png",
-              "sameAs": [
+              name: "Vellio Properties Ltd",
+              url: "https://www.vellioproperties.com",
+              logo: "https://www.vellioproperties.com/logo.png",
+              sameAs: [
                 "https://www.facebook.com/people/Vellio-Properties/61567786766589/",
-                "https://www.youtube.com/@VellioPropertiesLtd"
-              ]
-            })
+                "https://www.youtube.com/@VellioPropertiesLtd",
+              ],
+            }),
           }}
         />
       </head>
       <body className="min-h-screen flex flex-col">
         <noscript>
-          <iframe 
+          <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-MVSMKJBS"
-            height="0" 
-            width="0" 
-            style={{display: 'none', visibility: 'hidden'}}
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
           ></iframe>
         </noscript>
         <ScrollToTop />
         <Header />
-        <main className="flex-1">
-          {children}
-        </main>
+        <main className="flex-1">{children}</main>
         <Footer />
         <Toaster />
-        <GoogleAnalytics gaId="G-XSQ9HBGQG8" />
+        <Script
+          src={`https://www.googletagmanager.com/gtag/js?id=G-XSQ9HBGQG8`}
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XSQ9HBGQG8');
+          `}
+        </Script>
       </body>
     </html>
-  )
+  );
 }
-

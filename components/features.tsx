@@ -93,6 +93,8 @@ export default function Features() {
                   src={feature.image || "/placeholder.svg"}
                   alt={feature.title}
                   fill
+                  width={500}
+                  height={300}
                   className="object-cover transition-transform duration-300 group-hover:scale-105"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 33vw, 25vw"
                 />
