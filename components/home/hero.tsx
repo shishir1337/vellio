@@ -42,13 +42,13 @@ export default function Hero() {
               real estate industry
             </p>
             <div className="flex flex-col sm:flex-row gap-3 justify-center lg:justify-start">
-              <Button
+              {/* <Button
                 asChild
                 size="lg"
                 className="bg-white text-[#00447D] hover:bg-blue-50 text-base transition-all duration-300 ease-in-out hover:scale-105 shadow-lg hover:shadow-xl"
               >
-                <Link href="/about">Learn More</Link>
-              </Button>
+                <Link href="https://vellioproperties.com/about">Learn More</Link>
+              </Button> */}
               <Button
                 asChild
                 size="lg"
